@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+        int cost1 = sc.nextInt();
+        int q1 = sc.nextInt();
+        int cost2 = sc.nextInt();
+        int q2 = sc.nextInt();
+        int cost3 = sc.nextInt();
+        int q3 = sc.nextInt();
+        int budget = sc.nextInt();
+        float total = (cost1*q1)+(cost2*q2)+(cost3*q3);
+        double tax = total+(total*0.1);
+        String formatted  = String.format("%.2f",total);
+         String formatted1  = String.format("%.2f",tax);
+        System.out.println("Total (Before Tax): "+formatted);
+        System.out.println("Total (After Tax): "+formatted1);
+        if(budget>=tax){
+            System.out.println("Within Budget");
+        }else{
+            System.out.println("Over Budget");
+        }
+        
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
